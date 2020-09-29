@@ -1,0 +1,28 @@
+{
+  "name": "atrocore/skeleton-pim",
+  "description": "Skeleton for AtroPIM",
+  "homepage": "https://atropim.com",
+  "license": "GPL-3.0-only",
+  "minimum-stability": "stable",
+  "require": {
+    "atrocore/pim": "*"
+  },
+  "scripts": {
+    "pre-update-cmd": "ComposerCmd::preUpdate",
+    "post-update-cmd": "ComposerCmd::postUpdate",
+    "post-package-install": "ComposerCmd::postPackageInstall",
+    "post-package-update": "ComposerCmd::postPackageUpdate",
+    "pre-package-uninstall": "ComposerCmd::prePackageUninstall"
+  },
+  "autoload": {
+    "classmap": [
+      "composer-cmd.php"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packagist.atrocore.com/packages.json"
+    }
+  ]
+}
