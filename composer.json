@@ -22,7 +22,7 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://packagist.atrocore.com/packages.json"
+      "url": "https://packagist.atrocore.com/packages.json?id=common"
     }
   ]
 }
