@@ -844,78 +844,6 @@ INSERT INTO `packaging` VALUES ('5d9ec8aca28defa34','Box',0,'',NULL,1,'2019-10-1
 UNLOCK TABLES;
 
 --
--- Table structure for table `pim_image`
---
-
-DROP TABLE IF EXISTS `pim_image`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pim_image` (
-  `id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `deleted` tinyint(1) DEFAULT '0',
-  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sort_order` int(11) DEFAULT NULL,
-  `scope` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'Global',
-  `created_at` datetime DEFAULT NULL,
-  `modified_at` datetime DEFAULT NULL,
-  `category_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `product_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `image_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_by_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `modified_by_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `assigned_user_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDX_CATEGORY_ID` (`category_id`),
-  KEY `IDX_PRODUCT_ID` (`product_id`),
-  KEY `IDX_CREATED_BY_ID` (`created_by_id`),
-  KEY `IDX_MODIFIED_BY_ID` (`modified_by_id`),
-  KEY `IDX_ASSIGNED_USER_ID` (`assigned_user_id`),
-  KEY `IDX_NAME` (`name`,`deleted`),
-  KEY `IDX_ASSIGNED_USER` (`assigned_user_id`,`deleted`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pim_image`
---
-
-LOCK TABLES `pim_image` WRITE;
-/*!40000 ALTER TABLE `pim_image` DISABLE KEYS */;
-INSERT INTO `pim_image` VALUES ('5da04df691f19ff9b','u0040458_bigu0040458_big_5d653717c3aab2f39',0,NULL,0,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59a90c862458bd976','5d653714d5241190b','system',NULL,NULL),('5da04df6963c84780','philips_46pfl8007k_12_1_largephilips_46pfl8007k_12_1_large_5d653717b97830652',0,NULL,1,'Global','2019-10-11 09:40:06','2019-10-11 10:18:26',NULL,'59a90c862458bd976','5d653714cba48fc2e','system','1','1'),('5da04df69790bce28','philips_46pfl8007k_philips_46pfl8007k__5d653717b55490d48',0,NULL,2,'Channel','2019-10-11 09:40:06','2019-10-11 10:03:24',NULL,'59a90c862458bd976','5d653714a2302b8ae','system','1','1'),('5da04df698a9e9b21','philips_46pfl8007k_12_2_largephilips_46pfl8007k_12_2_large_5d653717ce02ea9bb',0,NULL,3,'Global','2019-10-11 09:40:06','2019-10-11 10:18:25',NULL,'59a90c862458bd976','5d653714c71d013c4','system','1','1'),('5da04df699d381a24','canon_eos_5d_mark_iii',0,NULL,0,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59a91396e7971debe','5d6617af418051a33','system',NULL,NULL),('5da04df69c8d97922','canon_eos_5d_mark_iii_2',0,NULL,1,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59a91396e7971debe','5d6617af0dc11f7a6','system',NULL,NULL),('5da04df69db1b49c4','canon_eos_5d_mark_iii_1',0,NULL,2,'Channel','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59a91396e7971debe','5d6617aeceea352f8','system',NULL,NULL),('5da04df6a2f2bf4ea','688720_0688720_0_5d652f7d7e692f65b',0,NULL,5,'Channel','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59b0e83c603a1b9c8','5d652f757b88d8e71','system',NULL,NULL),('5da04df6a70163bbd','71fvj87ziql71fvj87ziql_5d652f7d7e3af1edd',0,NULL,6,'Global','2019-10-11 09:40:06','2019-10-11 10:18:49',NULL,'59b0e83c603a1b9c8','5d652f75863b67985','system','1','1'),('5da04df6a99d9d4d2','philips_46pfl8007k_philips_46pfl8007k__5d653717b55490d48',0,NULL,7,'Channel','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fad6841f243119b','5d653714a2302b8ae','system',NULL,NULL),('5da04df6ae78479e0','philips_46pfl8007k_12_2_largephilips_46pfl8007k_12_2_large_5d653717ce02ea9bb',0,NULL,8,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fad6841f243119b','5d653714c71d013c4','system',NULL,NULL),('5da04df6b1496e05d','u0040458_bigu0040458_big_5d653717c3aab2f39',0,NULL,10,'Channel','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fad6841f243119b','5d653714d5241190b','system',NULL,NULL),('5da04df6b4b2fc5b1','philips_46pfl8007k_12_1_largephilips_46pfl8007k_12_1_large_5d653717b97830652',0,NULL,11,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fad6841f243119b','5d653714cba48fc2e','system',NULL,NULL),('5da04df6b6874e521','f047bde014e6e94feee40669d61fe931700x700',0,NULL,0,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fb0aa27855b0afd','5d6524721e0d7ef31','system',NULL,NULL),('5da04df6b984f3b29','apple_iphone_x_64gb_space_gray_9_1',0,NULL,-2,'Global','2019-10-11 09:40:06','2019-10-11 10:16:29',NULL,'59fb0aa27855b0afd','5d65218a3c2469172','system','1','1'),('5da04df6bdf40a18d','iphone_x_01',0,'https://screen.treotest.com/i.rybachok/2019-08-27_15-38-20.jpg',-1,'Channel','2019-10-11 09:40:06','2019-10-11 10:16:36',NULL,'59fb0aa27855b0afd','5da04df6c81f0c046','system','1','1'),('5da04df6c9f888c3a','65816581_5d79decfc424a96f9',0,NULL,0,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fb0e05a0c46a91a','5d79decdb13b0ef11','system',NULL,NULL),('5da04df6ccc51e1a8','iphone_x_64gb_28space_gray_2f_silver_29_500x500iphone_x_64gb_28space_gray_2f_silver_29_500x500_5d79decfd52b7d816',0,NULL,1,'Channel','2019-10-11 09:40:06','2019-10-11 10:17:24',NULL,'59fb0e05a0c46a91a','5d79decdbcfbefd03','system','1','1'),('5da04df6ce4f56d72','11_5d79decfd9e7d8d33',0,NULL,2,'Global','2019-10-11 09:40:06','2019-10-11 09:40:06',NULL,'59fb0e05a0c46a91a','5d79decddaa9b7396','system',NULL,NULL),('5da04df71e8c9717b','high_quality_slr_camera_bag_for_canon_eos_5d_mark_iii_lightweight_camera_bag_case_coverhigh_quality_slr_camera_bag_for_canon_eos_5d_mark_iii_lightweight_camera_bag_case_cover_5d652dc7208b9b72a',0,NULL,12,'Channel','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'59fb152fe4a37088e','5d652dc48edb3a614','system',NULL,NULL),('5da04df725809459e','caenboo_6d_70d_60d_camera_bag_soft_silicone_rubber_protective_camera_body_cover_case_skin_forcaenboo_6d_70d_60d_camera_bag_soft_silicone_rubber_protective_camera_body_cover_case_skin_for_5d652dc71a3571d72',0,NULL,1,'Global','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'59fb152fe4a37088e','5d652dc496d3f0eb5','system',NULL,NULL),('5da04df7298302ad0','canon_eos_1100d_3',0,NULL,13,'Channel','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'5a9e93d0e1e4fd1b9','5d6616aa28a890592','system',NULL,NULL),('5da04df72ee97575a','canon_eos_1100d',0,NULL,0,'Global','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'5a9e93d0e1e4fd1b9','5d6616aa3ba07dac2','system',NULL,NULL),('5da04df7337d654d8','canon_eos_1100d_2',0,NULL,14,'Channel','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'5a9e93d0e1e4fd1b9','5d6616aa282a239e6','system',NULL,NULL),('5da04df736ad70279','2018_11_09_10_13_352018_11_09_10_13_35_5d65377ad0ec838a8',0,NULL,13,'Global','2019-10-11 09:40:07','2019-10-11 10:18:38',NULL,'5b8649f0dae076eb0','5d65377a038969c5e','system','1','1'),('5da04df73960ba726','led5500_nycskyline_frt_2led5500_nycskyline_frt_2_5d65377acfd45d10a',0,NULL,14,'Channel','2019-10-11 09:40:07','2019-10-11 10:18:36',NULL,'5b8649f0dae076eb0','5d653779effd7a4a5','system','1','1'),('5da04df73dd1fe969','canon_eos_5d_mark_iv_224_105mm_1',0,NULL,17,'Channel','2019-10-11 09:40:07','2019-10-11 09:40:07',NULL,'5be971728d44f1a11','5d6618bc31b322ce3','system',NULL,NULL),('5da04df744d6dd571','canon_eos_5d_mark_iv_24_105mm_1',0,NULL,16,'Global','2019-10-11 09:40:07','2019-10-11 10:17:41',NULL,'5be971728d44f1a11','5d6618bc17ae115c5','system','1','1'),('5da04df7474a65b9d','canon_eos_5d_mark_iv_24_105mm',0,NULL,15,'Global','2019-10-11 09:40:07','2019-10-11 10:17:43',NULL,'5be971728d44f1a11','5d6618bc08ceed124','system','1','1'),('5da04df7493e39578','57217833_images_795348930357217833_images_7953489303_5d652e6c4d1088b5b',0,NULL,18,'Channel','2019-10-11 09:40:07','2019-10-11 09:48:39',NULL,'5be98924b15087ff5','5d652e65ac543fab4','system','5bd303861f3553551','5bd303861f3553551'),('5da04df74e420b0dc','57217833_images_795348909357217833_images_7953489093_5d652e6c3d28a9f51',0,NULL,19,'Global','2019-10-11 09:40:07','2019-10-11 10:19:10',NULL,'5be98924b15087ff5','5d652e65997f165db','system','1','5bd303861f3553551'),('5da05479686e7df46','3D-apple-iphone-x-color-model_Z.jpg',0,'https://static.turbosquid.com/Preview/001224/169/G2/3D-apple-iphone-x-color-model_Z.jpg',21,'Global','2019-10-11 10:07:53','2019-10-11 10:07:53','59fb0dc6f3fd265c9',NULL,'5da0547a4b080c007','1',NULL,'1'),('5da0555bd6ba2a2b9','1180247-200.png',0,'https://static.thenounproject.com/png/1180247-200.png',22,'Channel','2019-10-11 10:11:39','2019-10-11 10:11:39','5b7bc409a1e41e93c',NULL,'5da0555c4a53d7138','1',NULL,'1'),('5da055a2b32f410a0','set-of-modern-digital-devices-icons-vector-id926686744?k=6&m=926686744&s=612x612&w=0&h=5sK3uelC-t--j0vfHIbiCaOHM-kR39W9m0p8kN-Ty5k=',0,'https://media.istockphoto.com/vectors/set-of-modern-digital-devices-icons-vector-id926686744?k=6&m=926686744&s=612x612&w=0&h=5sK3uelC-t--j0vfHIbiCaOHM-kR39W9m0p8kN-Ty5k=',20,'Channel','2019-10-11 10:12:50','2019-10-11 10:12:53','5b7bc409a1e41e93c',NULL,'5da055a2bc3e1c972','1','1','1'),('5da055e987a1b36ef','canon_camera_331.jpg',0,'https://images.all-free-download.com/images/graphicthumb/canon_camera_331.jpg',24,'Global','2019-10-11 10:14:01','2019-10-11 10:14:01','59b253032d5f8c076',NULL,'5da055ea19e5fd82a','1',NULL,'1'),('5da057a6965916816','tv-vector-icon-12.jpg',0,'https://icon-library.net/images/tv-vector-icon/tv-vector-icon-12.jpg',25,'Channel','2019-10-11 10:21:26','2019-10-11 10:21:26','59b2527192bb1f16c',NULL,'5da057a6a2f1d9666','1',NULL,'1'),('5da057cf4e83c58fd','Projector-512.png',0,'https://cdn4.iconfinder.com/data/icons/proglyphs-business-and-office/512/Projector-512.png',23,'Global','2019-10-11 10:22:07','2019-10-11 10:22:13','59b2527192bb1f16c',NULL,'5da057cfd3d429535','1','1','1'),('5da057f67b3d2d96d','canon_camera_331.jpg',0,NULL,26,'Global','2019-10-11 10:22:46','2019-10-11 10:22:46','59b252808b342fdde',NULL,'5da055ea19e5fd82a','1',NULL,NULL),('5da057f67fe19735b','canon_eos_1100d',0,NULL,27,'Channel','2019-10-11 10:22:46','2019-10-11 10:22:57','59b252808b342fdde',NULL,'5d6616aa3ba07dac2','1','1','1'),('5da05ead2e2c720ff','professional-audiovisual-industry-computer-icons-video-advertising-clip-art-audio-cassette.jpg',0,'https://p7.hiclipart.com/preview/596/525/204/professional-audiovisual-industry-computer-icons-video-advertising-clip-art-audio-cassette.jpg',29,'Channel','2019-10-11 10:51:25','2019-10-11 10:51:25','59b25290f3d0bcb38',NULL,'5da05ead4d5716020','1',NULL,'1'),('5da05ed81dd1358cf','Scanner-512.png',0,'https://cdn2.iconfinder.com/data/icons/computer-hardware-20/154/Scanner-512.png',30,'Global','2019-10-11 10:52:08','2019-10-11 10:52:08','59b2529a3f5a673f4',NULL,'5da05ed89f08bc68f','1',NULL,'1'),('5da05f040163e285a','print-512.png',0,'https://cdn0.iconfinder.com/data/icons/basic-glyph/1024/print-512.png',28,'Channel','2019-10-11 10:52:52','2019-10-11 10:52:54','59b2529a3f5a673f4',NULL,'5da05f046c856567f','1','1','1'),('5da970bb6d681b772','71iO2R%2BCLjL._AC_SX679_.jpg',0,'https://images-na.ssl-images-amazon.com/images/I/71iO2R%2BCLjL._AC_SX679_.jpg',27,'Global','2019-10-18 07:58:51','2019-10-18 08:15:30',NULL,'5da95464266aa342e','5da970bb75c70ed05','1','1','1'),('5da970d9e711c5a44','36d09a0bbc972b751327e394380ce322.jpg',0,'https://i.citrus.ua/uploads/shop/3/6/36d09a0bbc972b751327e394380ce322.jpg',28,'Channel','2019-10-18 07:59:21','2019-10-18 08:15:23',NULL,'5da95464266aa342e','5da970da37002c454','1','1','1'),('5da970f686ae1095d','71k2q0WXNYL._AC_SX425_.jpg',0,'https://images-na.ssl-images-amazon.com/images/I/71k2q0WXNYL._AC_SX425_.jpg',30,'Global','2019-10-18 07:59:50','2019-10-18 07:59:54',NULL,'5da95464266aa342e','5da970f6a402cad39','1','1','1'),('5da9713eeb3e73952','9306590910be32830feca743b4e29bb0.jpg',0,'https://i.citrus.ua/imgcache/size_800/uploads/shop/9/3/9306590910be32830feca743b4e29bb0.jpg',29,'Channel','2019-10-18 08:01:02','2019-10-18 08:01:06',NULL,'5da95464266aa342e','5da9713f1887572b0','1','1','1');
-/*!40000 ALTER TABLE `pim_image` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pim_image_channel`
---
-
-DROP TABLE IF EXISTS `pim_image_channel`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pim_image_channel` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `channel_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `pim_image_id` varchar(24) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `deleted` tinyint(1) DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `UNIQ_BE536B0A72F5A1AAA5731445` (`channel_id`,`pim_image_id`),
-  KEY `IDX_BE536B0A72F5A1AA` (`channel_id`),
-  KEY `IDX_BE536B0AA5731445` (`pim_image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pim_image_channel`
---
-
-LOCK TABLES `pim_image_channel` WRITE;
-/*!40000 ALTER TABLE `pim_image_channel` DISABLE KEYS */;
-INSERT INTO `pim_image_channel` VALUES (1,'5a144ccfe86acdda7','5da04df69db1b49c4',0),(2,'59a81f8c56f59622d','5da04df69db1b49c4',0),(3,'59ba3d074e36186d4','5da04df69db1b49c4',0),(4,'5b7bba2f2f257d218','5da04df69db1b49c4',0),(5,'59a81fa552e62a6aa','5da04df69db1b49c4',0),(6,'5b7bba2f2f257d218','5da04df6a2f2bf4ea',0),(7,'59ba3d074e36186d4','5da04df6a2f2bf4ea',0),(10,'59a81f8c56f59622d','5da04df6a99d9d4d2',0),(11,'59a81f80ae0ce8ecb','5da04df6a99d9d4d2',0),(12,'5971b7857670e1789','5da04df6a99d9d4d2',0),(13,'5a144ccfe86acdda7','5da04df6b1496e05d',0),(14,'59a81f8c56f59622d','5da04df6b1496e05d',0),(15,'59a81f80ae0ce8ecb','5da04df6b1496e05d',0),(16,'59ba3d074e36186d4','5da04df6f3f2f21bf',0),(17,'59a81f8c56f59622d','5da04df6f3f2f21bf',0),(18,'5a144ccfe86acdda7','5da04df704847eb39',0),(19,'59a81f8c56f59622d','5da04df704847eb39',0),(20,'5a144ccfe86acdda7','5da04df709ba487ea',0),(21,'59a81f8c56f59622d','5da04df709ba487ea',0),(22,'59ba3d074e36186d4','5da04df709ba487ea',0),(23,'5b7bba2f2f257d218','5da04df709ba487ea',0),(24,'59a81fa552e62a6aa','5da04df709ba487ea',0),(25,'5a144ccfe86acdda7','5da04df71e8c9717b',0),(26,'59ba3d074e36186d4','5da04df71e8c9717b',0),(27,'59a81f8c56f59622d','5da04df71e8c9717b',0),(28,'59ba3d074e36186d4','5da04df7298302ad0',0),(29,'5b7bba2f2f257d218','5da04df7298302ad0',0),(30,'5a144ccfe86acdda7','5da04df7337d654d8',0),(31,'59a81f8c56f59622d','5da04df7337d654d8',0),(32,'5b7bba2f2f257d218','5da04df73960ba726',0),(33,'59ba3d074e36186d4','5da04df73960ba726',0),(34,'59a81f8c56f59622d','5da04df73960ba726',0),(35,'5a144ccfe86acdda7','5da04df73dd1fe969',0),(36,'59a81f8c56f59622d','5da04df73dd1fe969',0),(37,'59a81f8c56f59622d','5da04df7493e39578',0),(38,'59a81f80ae0ce8ecb','5da04df7493e39578',0),(41,'59a81fa552e62a6aa','5da04df69790bce28',0),(42,'59a81f8c56f59622d','5da04df69790bce28',0),(43,'5b7bba2f2f257d218','5da0555bd6ba2a2b9',0),(44,'5a144ccfe86acdda7','5da0555bd6ba2a2b9',0),(45,'59a81fa552e62a6aa','5da055a2b32f410a0',0),(46,'59a81f8c56f59622d','5da055a2b32f410a0',0),(47,'5a144ccfe86acdda7','5da04df6bdf40a18d',0),(48,'59a81f8c56f59622d','5da04df6bdf40a18d',0),(49,'5a144ccfe86acdda7','5da04df6ccc51e1a8',0),(50,'59ba3d074e36186d4','5da04df6ccc51e1a8',0),(51,'59a81f8c56f59622d','5da04df6ccc51e1a8',0),(52,'59ba3d074e36186d4','5da057a6965916816',0),(53,'59a81fa552e62a6aa','5da057a6965916816',0),(54,'5b7bba2f2f257d218','5da057f67fe19735b',0),(55,'59a81fa552e62a6aa','5da057f67fe19735b',0),(56,'59ba3d074e36186d4','5da05ead2e2c720ff',0),(57,'59a81f8c56f59622d','5da05ead2e2c720ff',0),(58,'5971b7857670e1789','5da05ead2e2c720ff',0),(59,'5b7bba2f2f257d218','5da05f040163e285a',0),(60,'5a144ccfe86acdda7','5da05f040163e285a',0),(61,'59ba3d074e36186d4','5da05f040163e285a',0),(62,'59a81fa552e62a6aa','5da05f040163e285a',0),(63,'59a81f8c56f59622d','5da05f040163e285a',0),(64,'59ba3d074e36186d4','5da9546460b102636',0),(65,'59a81f8c56f59622d','5da9546460b102636',0),(66,'5a144ccfe86acdda7','5da970d9e711c5a44',0),(67,'59ba3d074e36186d4','5da970d9e711c5a44',0),(68,'59a81fa552e62a6aa','5da970d9e711c5a44',0),(69,'5b7bba2f2f257d218','5da9713eeb3e73952',0),(70,'59a81f8c56f59622d','5da9713eeb3e73952',0);
-/*!40000 ALTER TABLE `pim_image_channel` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `portal`
 --
 
@@ -1677,62 +1605,6 @@ INSERT INTO `subscription` VALUES (19,'5b6856208df9c890a','Account','1'),(47,'5d
 UNLOCK TABLES;
 
 --
--- Table structure for table `task`
---
-
-DROP TABLE IF EXISTS `task`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `task` (
-  `id` varchar(24) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `deleted` tinyint(1) DEFAULT '0',
-  `status` varchar(255) COLLATE utf8_unicode_ci DEFAULT 'Not Started',
-  `priority` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Normal',
-  `date_start` datetime DEFAULT NULL,
-  `date_end` datetime DEFAULT NULL,
-  `date_start_date` date DEFAULT NULL,
-  `date_end_date` date DEFAULT NULL,
-  `date_completed` datetime DEFAULT NULL,
-  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `created_at` datetime DEFAULT NULL,
-  `modified_at` datetime DEFAULT NULL,
-  `parent_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `parent_type` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `account_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_by_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `modified_by_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `assigned_user_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `product_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `contact_id` varchar(24) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDX_PARENT` (`parent_id`,`parent_type`),
-  KEY `IDX_ACCOUNT_ID` (`account_id`),
-  KEY `IDX_CONTACT_ID` (`contact_id`),
-  KEY `IDX_CREATED_BY_ID` (`created_by_id`),
-  KEY `IDX_MODIFIED_BY_ID` (`modified_by_id`),
-  KEY `IDX_ASSIGNED_USER_ID` (`assigned_user_id`),
-  KEY `IDX_DATE_START_STATUS` (`date_start`,`status`),
-  KEY `IDX_DATE_END_STATUS` (`date_end`,`status`),
-  KEY `IDX_DATE_START` (`date_start`,`deleted`),
-  KEY `IDX_STATUS` (`status`,`deleted`),
-  KEY `IDX_ASSIGNED_USER` (`assigned_user_id`,`deleted`),
-  KEY `IDX_ASSIGNED_USER_STATUS` (`assigned_user_id`,`status`),
-  KEY `IDX_PRODUCT` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `task`
---
-
-LOCK TABLES `task` WRITE;
-/*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` VALUES ('5a9e95312ec27aabc','SEO-Langbeschreibung erstellen',0,'Not Started','Normal','2018-03-06 14:30:00','2018-03-07 09:00:00',NULL,NULL,NULL,'','2018-03-06 13:18:41','2018-03-06 13:18:41','5a9e93d0e1e4fd1b9','Product',NULL,'1',NULL,'1',NULL,NULL),('5d7b8431becb86c73','Update long and alternative description, after thet cat activation product',0,'Not Started','Normal','2019-09-09 03:00:00','2020-03-26 02:00:00','2019-09-09','2020-03-26',NULL,'','2019-09-13 11:57:37','2019-09-13 11:57:37','59fb0e05a0c46a91a','Product',NULL,'1',NULL,'1',NULL,NULL),('5d7b845767f8ff134','Add image',0,'Completed','Normal','2018-05-16 03:00:00','2018-08-16 03:00:00','2018-05-16','2018-08-16','2019-09-13 11:58:15','','2019-09-13 11:58:15','2019-09-13 11:58:15','59fb0e05a0c46a91a','Product',NULL,'1',NULL,'1',NULL,NULL);
-/*!40000 ALTER TABLE `task` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tax`
 --
 
@@ -1839,3 +1711,20 @@ LOCK TABLES `user` WRITE;
 INSERT INTO `user` VALUES ('595e5a6f7b7b3d3e8',0,0,'user_for_samsung','M/KT1IjhuCevijm6x4t6R.ZnVkAEzBuiEXslc8igQIBjMWGrzgS3mSEd6PFeMinLKv0mDiL1Wm27u1wpW/H.z0','Mr.','User','Samsung Reporter',1,0,0,'','','2017-07-06 15:42:39',NULL,NULL,NULL,NULL),('595e5a8e5972c3900',0,0,'user_for_sony','/7Pn0zHgleRkzDuZJegBPeZ4oG14VwJl0IRwWaT0tCBzPs2aIpxKMwcpkQDxy4iiC9PXYQabOrKQIIukkQCgl/','Mr.','User','Sony Reporter',1,0,0,'','','2017-07-06 15:43:10',NULL,NULL,NULL,NULL),('595e5abdb296bbfdc',0,0,'user_for_both_editor','ZoL/FQJuDglSiMYI9pfPXd7bOtoLQ6qOH6Hi7T.vnL9dKZRu48P6KaTr7C0uleEY7BUKlfZb/GMgq6dlBVggQ.','Mr.','User','Sony & Samsung Editor',1,0,0,'','','2017-07-06 15:43:57',NULL,NULL,NULL,NULL),('595e5eeb7eb97f7c2',0,0,'user_for_both_moderator','lipNkSLYfRoceXNfA7UwModA3hmb5eU4fItYWXQ9xZH9uIOHW64j92WQ.dW5ZNWoRNSkIxr5d8MYaB4.tZ1oh/','Mr.','User','Samsung & Sony Moderator',1,0,0,'','','2017-07-06 16:01:47',NULL,NULL,NULL,NULL),('595e646990dfcf1f1',0,0,'user_samsung_reporter_sony_moderator','DB7tbbhc4VmY.k6yJT8nTpTFYXpDpzdZBCuwOgEUv9RtF.10oeh3JyaSipKL3c9cyRfS.cT0AdvE6MgZvrQ/C0','Mr.','User Samsung Reporter','Sony Moderator',1,0,0,'','','2017-07-06 16:25:13',NULL,NULL,NULL,NULL),('5b6807ebe42c89d66',0,0,'retailer','zKY81o8sfQVb.uxdUy2Wnr.LaXtOQ9BJ1QY80EViz/4KK44aVTnwmO4TRR4KCQGa3Eixj9xfb2sLuKgGt4sJS/','Mr.','Retailer','Retailer',1,1,0,NULL,'','2018-08-06 08:33:47',NULL,'5b68563817b1dbd0b',NULL,'1'),('5b910d520c3fe4642',0,0,'supplier','pgRbekNqJIyU1ExkeyGEyJQ5n9kQ4sfIe0kYjZqMzc9kufLjQHgUNx7lOvJw3zjD5I6DSCo5jcbBITt5LEICm1','Mrs.','Supplier','Supplier',1,1,0,NULL,'','2018-09-06 11:19:46',NULL,'5b910d35ecf9383b9',NULL,'1'),('5bbaf1daea9ee8a6b',0,0,'manager','CW2KQv.ccR773TiC.dDmjFV4YFIdsrx2ooNtXWRdJYOYvSnmUK/Zmb1OEeHLqDz6il1nK1B4oB8Y1K1KRJxLI.','','Manager','Manager',1,0,0,'','','2018-10-08 05:57:46',NULL,NULL,NULL,'1');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
+
+ALTER TABLE `associated_product` DROP main_product_image_name, DROP related_product_image_name;
+ALTER TABLE `category` DROP image_id, ADD sort_order INT DEFAULT NULL COLLATE utf8mb4_unicode_ci;
+ALTER TABLE `country` ADD name_de_de VARCHAR(255) DEFAULT NULL COLLATE utf8mb4_unicode_ci, ADD name_en_us VARCHAR(255) DEFAULT NULL COLLATE utf8mb4_unicode_ci;
+ALTER TABLE `product` DROP image_id;
+DROP INDEX id ON `autofollow`;
+DROP INDEX id ON `import_entity`;
+DROP INDEX id ON `email_email_account`;
+DROP INDEX id ON `email_inbound_email`;
+DROP INDEX id ON `email_email_address`;
+DROP INDEX id ON `email_user`;
+DROP INDEX id ON `entity_user`;
+DROP INDEX id ON `inbound_email_team`;
+DROP INDEX id ON `note_user`;
+DROP INDEX id ON `note_portal`;
+DROP INDEX id ON `note_team`;
+DROP INDEX id ON `entity_phone_number`
