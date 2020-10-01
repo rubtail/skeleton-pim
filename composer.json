@@ -2,10 +2,10 @@
   "name": "atrocore/skeleton-pim",
   "description": "Skeleton for AtroPIM",
   "homepage": "https://atropim.com",
-  "license": "GPL-3.0-only",
   "minimum-stability": "stable",
   "require": {
-    "atrocore/pim": "*"
+    "atrocore/core": "~1.0.0",
+    "atrocore/pim": "~1.0.0"
   },
   "scripts": {
     "pre-update-cmd": "ComposerCmd::preUpdate",
