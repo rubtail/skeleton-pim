@@ -40,6 +40,14 @@
                     "name": "image"
                 },
                 false
+            ],
+            [
+                {
+                    "name": "descriptionDeDe"
+                },
+                {
+                    "name": "descriptionEnUs"
+                }
             ]
         ],
         "style": "default",

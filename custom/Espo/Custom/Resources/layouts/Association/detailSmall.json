@@ -32,6 +32,14 @@
                     "name": "description",
                     "fullWidth": true
                 }
+            ],
+            [
+                {
+                    "name": "descriptionDeDe"
+                },
+                {
+                    "name": "descriptionEnUs"
+                }
             ]
         ],
         "style": "default",

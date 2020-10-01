@@ -26,14 +26,12 @@ $config->set(
         'Channel',
         'Product',
         'ProductFamily',
-        'PimImage',
+        'Asset',
+        'AssetCategory',
+        'Collection',
         '_delimiter_',
         'Account',
-        'Contact',
-        'Lead',
-        'Call',
-        'Meeting',
-        'Task'
+        'Contact'
     ]
 );
 $config->set(
@@ -46,7 +44,10 @@ $config->set(
         'Channel',
         'Product',
         'ProductFamily',
-        'Catalog'
+        'Catalog',
+        'Asset',
+        'AssetCategory',
+        'Collection'
     ]
 );
 $unitsOfMeasure = [
@@ -148,6 +149,7 @@ $data = json_decode(file_get_contents('composer.json'), true);
 
 // prepare
 $data['require']['atrocore/pim'] = '*';
+$data['require']['atrocore/dam'] = '*';
 
 // save new composer data
 file_put_contents('composer.json', json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
